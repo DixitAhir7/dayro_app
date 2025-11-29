@@ -1,0 +1,14 @@
+# Backend ignores
+node_modules/
+.env
+*.log
+
+/info
+.env.expire.apikeys
+
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

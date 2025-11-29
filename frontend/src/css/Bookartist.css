@@ -1,0 +1,12 @@
+/* booking artists css 
+every css about booking here
+*/
+
+/* after booked display booking info for edit | cofnrom */
+
+.bgsvgicons {
+    /* background-color: orange; */
+    background-image: url(../assets//icons//canvas_combinediconskalakar.png);
+    height: 100vh;
+    width: 100%;
+}

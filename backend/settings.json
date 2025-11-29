@@ -1,0 +1,11 @@
+{
+    "actions": [
+        {
+            "command": {
+                "action": "open files",
+                "input": "echo open both"
+            },
+            "keys": "codeboth"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+version: "3.8"
+services:
+  mongo:
+    image: mongo:6
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis:7-alpine
+    command: [ "redis-server", "--save", "900", "1" ]
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    env_file:
+      - .env.local
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+      - redis
+
+  worker:
+    build: ./worker
+    env_file:
+      - .env.local
+    depends_on:
+      - redis
+      - mongo
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+
+volumes:
+  mongo-data:

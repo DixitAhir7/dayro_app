@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* body {
+    user-select: none;
+} */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    /* prevent auto zoom */
+}
+
+/* html,
+body {
+    touch-action: manipulation;
+} */
+
+@layer base {
+    p {
+        @apply text-lg
+    }
+
+    a {
+        @apply block
+    }
+
+    h1 {
+        @apply text-3xl
+    }
+
+    main {
+        @apply ml-0 md:ml-58 pb-12;
+    }
+
+    button {
+        @apply bg-gray-500 text-white hover:bg-orange-400 active:scale-95 transition-all duration-100 px-3 py-1
+    }
+
+    textarea {
+        @apply w-120 mt-5 p-2 border resize-none h-30 max-sm:w-63 max-md:w-100 max-lg:w-135
+    }
+
+    input {
+        @apply focus:outline-0 w-50 border-black/60 border-b-2 block
+    }
+
+    span {
+        @apply cursor-pointer block
+    }
+
+    .selectStyle {
+        @apply w-52 p-2 border shadow-sm focus:outline-none
+    }
+}
